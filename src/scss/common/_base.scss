@@ -1,0 +1,144 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body {
+  font-family: $fontFamily;
+  background-color: $colorBlack;
+  color: $colorWhite;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 16px;
+
+  @include media(tablet) {
+    font-size: 18px;
+  }
+
+  @include media(laptop) {
+    font-size: 20px;
+  }
+
+  @include media(desktop) {
+    font-size: 24px;
+  }
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+
+  @include media(mobile) {
+    min-width: 375px;
+    max-width: 767px;
+  }
+
+  @include media(tablet) {
+    min-width: 768px;
+    max-width: 1279px;
+  }
+
+  @include media(laptop) {
+    min-width: 1280px;
+    max-width: 1920px;
+  }
+
+  @include media(desktop) {
+    min-width: 1920px;
+    max-width: 1920px;
+  }
+}
+
+.title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.05;
+
+  @include media(laptop) {
+    font-size: 85px;
+  }
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.05;
+
+  @include media(laptop) {
+    font-size: 50px;
+  }
+}
+
+.btn-primary {
+  font-family: inherit;
+  color: $colorWhite;
+  border: 2px solid rgba($colorWhite, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 30px 0 rgba(137, 53, 225, 0.5),
+    0 6px 30px 0 rgba(69, 5, 183, 0.4),
+    0 4px 4px 0 rgba(48, 0, 134, 0.3),
+    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.45),
+    inset -6px -4px 10px 0 rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #990aff 0%, #490eb7 100%);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(0.97);
+    background: linear-gradient(135deg, #b31aff 0%, #5c12c4 100%);
+    box-shadow:
+      0 0 40px 0 rgba(137, 53, 225, 0.7),
+      0 8px 35px 0 rgba(69, 5, 183, 0.5);
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow:
+      0 0 40px 0 rgba(137, 53, 225, 0.7),
+      0 8px 35px 0 rgba(69, 5, 183, 0.5);
+  }
+
+  &:focus {
+    outline: 2px solid $colorPrimary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    outline: 2px solid $colorPrimary;
+    outline-offset: 2px;
+  }
+}
+
+.btn-secondary {
+  font-family: $fontFamily;
+  color: $colorWhite;
+  background-color: #1c1f22;
+  border: 2px solid rgba($colorWhite, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(0.97);
+    background-color: #3a3a4e;
+  }
+
+  &:active {
+    transform: scale(0.97);
+    background-color: #3a3a4e;
+  }
+
+  &:focus {
+    outline: 2px solid $colorPrimary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    outline: 2px solid $colorPrimary;
+    outline-offset: 2px;
+  }
+}
