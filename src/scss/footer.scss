@@ -1,7 +1,7 @@
 @use './common/index' as *;
 
 .footer {
-  border-top: 1px solid rgba($colorWhite, 0.1);
+  border-top: 1px solid rgba($colorWhite, 0.15);
 }
 
 .footer-container {
@@ -11,23 +11,31 @@
   align-items: center;
   gap: 20px;
 
-  @include media(desktop) {
-    padding: 20px;
+  @include media(tablet) {
+    padding: 20px 40px;
     flex-direction: row;
     justify-content: space-between;
     gap: 40px;
+  }
+
+  @include media(laptop) {
+    padding: 20px 60px;
+  }
+
+  @include media(desktop) {
+    padding: 20px 80px;
   }
 }
 
 .footer-copyright {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.6;
   text-align: center;
   color: $colorWhite;
 
-  @include media(desktop) {
-    font-size: 14px;
+  @include media(tablet) {
+    font-size: 18px;
     text-align: left;
   }
 }
@@ -36,7 +44,7 @@
   display: flex;
   gap: 24px;
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 32px;
   }
 }
@@ -61,44 +69,48 @@
   align-items: center;
   gap: 16px;
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 20px;
   }
 }
 
 .footer-socials-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.6;
   color: $colorWhite;
+
+  @include media(tablet) {
+    font-size: 18px;
+  }
 }
 
 .footer-socials {
   display: flex;
   gap: 12px;
 
-  @include media(desktop) {
+  @include media(tablet) {
     gap: 16px;
   }
 }
 
 .footer-social-link {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   border: 1px solid rgba($colorWhite, 0.1);
-  border-radius: 100px;
+  border-radius: 50%;
   box-shadow:
     0 1px 2px 0 rgba(10, 13, 18, 0.05),
     inset 0 -2px 0 0 rgba(10, 13, 18, 0.05),
     inset 0 0 0 1px rgba(10, 13, 18, 0.18);
-  background: #1c1f22;
+  background-color: $colorInkGray;
 
-  transition: opacity 0.3s ease;
+  transition: all 0.35s ease;
 
   svg {
     width: 20px;
@@ -107,11 +119,12 @@
 
   &:hover {
     opacity: 0.7;
+    border: 1px solid rgba($colorWhite, 0.5);
   }
 
   @include media(desktop) {
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
 
     svg {
       width: 24px;

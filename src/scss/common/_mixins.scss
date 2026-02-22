@@ -1,5 +1,40 @@
 @use './breakpoints' as *;
 
+// @mixin media($_screen) {
+//   @if $_screen == toMobile {
+//     @media screen and (max-width: $toMobile) {
+//       @content;
+//     }
+//   } @else if $_screen == mobile {
+//     @media screen and (min-width: $mobile) {
+//       @content;
+//     }
+//   } @else if $_screen == toTablet {
+//     @media screen and (max-width: $toTablet) {
+//       @content;
+//     }
+//   } @else if $_screen == tablet {
+//     @media screen and (min-width: $tablet) {
+//       @content;
+//     }
+//   } @else if $_screen == toLaptop {
+//     @media screen and (max-width: $toLaptop) {
+//       @content;
+//     }
+//   } @else if $_screen == laptop {
+//     @media screen and (min-width: $laptop) {
+//       @content;
+//     }
+//   } @else if $_screen == toDesktop {
+//     @media screen and (max-width: $toDesktop) {
+//       @content;
+//     }
+//   } @else if $_screen == desktop {
+//     @media screen and (min-width: $desktop) {
+//       @content;
+//     }
+//   }
+// }
 @mixin media($_screen) {
   @if $_screen == toMobile {
     @media screen and (max-width: $toMobile) {
@@ -9,24 +44,12 @@
     @media screen and (min-width: $mobile) {
       @content;
     }
-  } @else if $_screen == toTablet {
-    @media screen and (max-width: $toTablet) {
-      @content;
-    }
   } @else if $_screen == tablet {
     @media screen and (min-width: $tablet) {
       @content;
     }
-  } @else if $_screen == toLaptop {
-    @media screen and (max-width: $toLaptop) {
-      @content;
-    }
   } @else if $_screen == laptop {
     @media screen and (min-width: $laptop) {
-      @content;
-    }
-  } @else if $_screen == toDesktop {
-    @media screen and (max-width: $toDesktop) {
       @content;
     }
   } @else if $_screen == desktop {
