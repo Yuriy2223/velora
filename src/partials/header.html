@@ -1,4 +1,4 @@
-<section class="header-section">
+<!-- <section class="header-section">
   <div class="container header-container">
     <a href="./index.html" class="logo-link">
       <img src="/logo.svg" alt="logo" class="logo" />
@@ -69,4 +69,88 @@
       <a href="#" class="nav-link">Contact us</a>
     </div>
   </div>
-</section>
+</section> -->
+<header class="header-section">
+  <div class="container header-container">
+    <a href="./index.html" class="logo-link">
+      <img src="/logo.svg" alt="CompanyName" class="logo" />
+    </a>
+
+    <button
+      class="burger-btn"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="header-nav"
+    >
+      <svg
+        width="40"
+        height="10"
+        viewBox="0 0 40 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="2" fill="white" />
+        <rect y="8" width="40" height="2" fill="white" />
+      </svg>
+    </button>
+
+    <nav class="header-nav" id="header-nav" aria-label="Main navigation">
+      <div class="nav-header">
+        <a href="./index.html" aria-hidden="true" tabindex="-1">
+          <img src="/logo.svg" alt="" class="logo-mob-menu" />
+        </a>
+        <button
+          class="burger-btn-close"
+          type="button"
+          aria-label="Close menu"
+          aria-expanded="true"
+          aria-controls="header-nav"
+        >
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M18 6L6 18M6 6L18 18"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <span class="nav-number" aria-hidden="true">01 /</span>
+          <a href="#insight" class="nav-link">Insight</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number" aria-hidden="true">02 /</span>
+          <a href="#about" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number" aria-hidden="true">03 /</span>
+          <a href="#build" class="nav-link">What we build</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number" aria-hidden="true">04 /</span>
+          <a href="#approach" class="nav-link">Our Approach</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number" aria-hidden="true">05 /</span>
+          <a href="#work" class="nav-link">Who we work with</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-number" aria-hidden="true">06 /</span>
+          <a href="#philosophy" class="nav-link">Our Philosophy</a>
+        </li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="#" class="btn-primary btn-contact">Contact us</a>
+      </div>
+    </nav>
+
+    <div class="header-actions-desktop">
+      <a href="#" class="nav-link">Contact us</a>
+    </div>
+  </div>
+</header>

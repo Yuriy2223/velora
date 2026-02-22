@@ -1,14 +1,15 @@
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
+  anchor.addEventListener('click', (e) => {
     e.preventDefault();
 
-    const targetId = anchor.getAttribute("href");
-    if (!targetId || targetId === "#") return;
+    const targetId = anchor.getAttribute('href');
+    if (!targetId || targetId === '#') return;
 
     const targetElement = document.querySelector(targetId);
     if (!targetElement) return;
 
-    const header = document.querySelector("header");
+    // const header = document.querySelector("header");
+    const header = document.querySelector('header.header-section');
     const headerHeight = header?.offsetHeight || 0;
 
     const offset = targetElement.offsetTop - headerHeight - 30;
@@ -41,11 +42,11 @@ function easeInOutQuad(t) {
   return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 }
 let lastScroll = 0;
-const header = document.querySelector(".header-section");
+const header = document.querySelector('.header-section');
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   const current = window.scrollY;
 
-  header.classList.toggle("is-scrolled", current > 0);
+  header.classList.toggle('is-scrolled', current > 0);
   lastScroll = current;
 });
