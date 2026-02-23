@@ -1,0 +1,80 @@
+@use './common/index' as *;
+
+.about-section {
+  background-color: $colorBlack;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 16px;
+
+  @include media(tablet) {
+    padding: 100px 40px;
+    gap: 56px;
+  }
+
+  @include media(laptop) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 54px;
+    padding: 110px 50px;
+  }
+
+  @include media(desktop) {
+    padding: 140px 80px;
+    gap: 80px;
+  }
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+
+  @include media(laptop) {
+    width: 50%;
+    gap: 118px;
+  }
+
+  @include media(desktop) {
+    gap: 30px;
+  }
+}
+
+.about-title {
+  color: $colorWhite;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+
+  @include media(laptop) {
+    width: 55%;
+    flex-direction: column-reverse;
+  }
+}
+
+.about-img {
+  object-fit: contain;
+}
+
+.about-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(tablet) {
+  }
+  @include media(laptop) {
+    gap: 20px;
+  }
+  @include media(desktop) {
+    gap: 24px;
+  }
+}
