@@ -1,0 +1,98 @@
+@use './common/index' as *;
+
+.insight-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  background-color: $colorWhite;
+  gap: 16px;
+
+  @include media(tablet) {
+    padding: 54px 32px;
+    gap: 56px;
+  }
+
+  @include media(laptop) {
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+  }
+}
+
+.insight-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include media(laptop) {
+    width: 50%;
+    align-items: center;
+    margin: auto 0;
+  }
+}
+
+.insight-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+
+  @include media(tablet) {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  @include media(laptop) {
+    width: 50%;
+  }
+}
+
+.insight-title {
+  color: $colorBlack;
+
+  @include media(laptop) {
+    width: 90%;
+  }
+}
+
+.line {
+  display: block;
+}
+
+.dot {
+  color: $colorSecondary;
+}
+
+.insight-card-chaos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $colorFrostGray;
+  padding: 16px;
+  gap: 16px;
+
+  @include media(tablet) {
+    flex-direction: column-reverse;
+    padding: 40px;
+    gap: 90px;
+  }
+}
+
+.insight-card-stack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $colorIceGray;
+  padding: 16px;
+  gap: 16px;
+
+  @include media(tablet) {
+    padding: 40px;
+  }
+}
+.chaos-card-img {
+  object-fit: contain;
+}
+.insight-card-text {
+  color: $colorBlack;
+}
