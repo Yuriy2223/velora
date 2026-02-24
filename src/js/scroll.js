@@ -8,10 +8,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const targetElement = document.querySelector(targetId);
     if (!targetElement) return;
 
-    // const header = document.querySelector("header");
     const header = document.querySelector('header.header-section');
     const headerHeight = header?.offsetHeight || 0;
-
     const offset = targetElement.offsetTop - headerHeight - 30;
 
     smoothScrollTo(window.scrollY, offset, 1800);
