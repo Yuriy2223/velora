@@ -1,0 +1,145 @@
+@use './common/index' as *;
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba($colorBlack, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  position: relative;
+  background-color: #110f1a;
+  // overflow: hidden;
+  width: 100%;
+  max-width: 343px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(50px);
+  transition: transform 0.35s ease;
+
+  .modal-overlay.is-open & {
+    transform: translateY(0);
+  }
+
+  @include media(tablet) {
+    flex-direction: row-reverse;
+    max-width: 760px;
+    height: 358px;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+  &:focus {
+    outline: 2px solid $colorPrimary;
+    outline-offset: 2px;
+  }
+}
+
+.modal-image {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @include media(tablet) {
+    width: 46%;
+    height: auto;
+  }
+}
+
+.modal-img {
+  object-fit: cover;
+}
+
+.modal-content {
+  height: 50%;
+  padding: 26px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media(tablet) {
+    width: 54%;
+    height: 100%;
+    padding: 40px 36px;
+    justify-content: center;
+  }
+}
+
+.modal-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.05;
+  color: $colorWhite;
+
+  @include media(tablet) {
+    font-size: 50px;
+  }
+}
+
+.modal-text {
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.6;
+
+  @include media(tablet) {
+    font-size: 24px;
+  }
+}
+
+.modal-email {
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $colorSecondary;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
+  }
+
+  &:hover {
+    text-decoration: underline;
+
+    svg {
+      transform: translate(6px, -6px);
+    }
+  }
+
+  @include media(tablet) {
+    font-size: 24px;
+  }
+}
