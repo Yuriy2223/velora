@@ -75,17 +75,16 @@ body {
   font-size: 20px;
   line-height: 1.05;
 
-  @include media(mobile) {
-  }
-
   @include media(tablet) {
+    font-size: 40px;
   }
 
   @include media(laptop) {
-    font-size: 50px;
+    font-size: 44px;
   }
 
   @include media(desktop) {
+    font-size: 50px;
   }
 }
 
@@ -135,6 +134,16 @@ body {
   &:hover {
     transform: scale(0.97);
   }
+
+  &:focus {
+    outline: 2px solid $colorPrimary;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    outline: 2px solid $colorPrimary;
+    outline-offset: 2px;
+  }
 }
 
 .btn-primary {
@@ -143,19 +152,13 @@ body {
 
   &:hover {
     box-shadow:
-      0 6px 18px rgba(21, 93, 94, 0.35),
-      0 0 15px rgba(21, 93, 94, 0.45),
-      inset 0 0 14px rgba(21, 93, 94, 0.65);
-  }
-
-  &:focus {
-    outline: 2px solid $colorWhite;
-    outline-offset: 2px;
+      0 0 20px 4px rgba(21, 85, 87, 0.3),
+      inset 0 0 20px 2px rgba(27, 123, 125, 0.8);
   }
 
   &:disabled {
-    outline: 2px solid $colorPrimary;
-    outline-offset: 2px;
+    box-shadow: inset 0 0 10px 2px #0d3738;
+    background-color: #071e1f;
   }
 }
 
@@ -165,9 +168,8 @@ body {
 
   &:hover {
     box-shadow:
-      0 8px 22px rgba(38, 40, 51, 0.45),
-      0 0 20px rgba(38, 40, 51, 0.55),
-      inset 0 0 16px rgba(38, 40, 51, 0.75);
+      0 0 20px 4px rgba(76, 78, 102, 0.3),
+      inset 0 0 20px 2px rgba(57, 59, 77, 0.8);
   }
 
   &:active {
@@ -177,13 +179,8 @@ body {
       inset 0 0 16px rgba(38, 40, 51, 0.75);
   }
 
-  &:focus {
-    outline: 2px solid $colorPrimary;
-    outline-offset: 2px;
-  }
-
   &:disabled {
-    outline: 2px solid $colorPrimary;
-    outline-offset: 2px;
+    box-shadow: inset 0 0 10px 2px #1c1c26;
+    background: #0f0f14;
   }
 }

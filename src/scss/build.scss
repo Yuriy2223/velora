@@ -1,0 +1,105 @@
+@use './common/index' as *;
+
+.build-section {
+  background-color: $colorWhite;
+  color: $colorBlack;
+}
+
+.build-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 32px 16px 16px;
+
+  @include media(tablet) {
+    padding: 100px 40px;
+    gap: 48px;
+  }
+
+  @include media(laptop) {
+    padding: 100px 40px 60px;
+  }
+
+  @include media(desktop) {
+    padding: 140px 80px;
+  }
+}
+
+.build-title {
+  color: $colorBlack;
+}
+
+.build-list {
+  @include media(laptop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'item1 item3'
+      'item2 item4';
+    column-gap: 48px;
+  }
+}
+
+.build-item {
+  display: flex;
+  column-gap: 12px;
+
+  padding: 12px 0;
+  border-bottom: 1px solid rgba($colorBlack, 0.15);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @include media(laptop) {
+    column-gap: 24px;
+    padding: 24px 0;
+
+    &:nth-child(1) {
+      grid-area: item1;
+      border-bottom: 1px solid rgba($colorBlack, 0.15);
+    }
+    &:nth-child(2) {
+      grid-area: item2;
+      border-bottom: none;
+    }
+    &:nth-child(3) {
+      grid-area: item3;
+      border-bottom: 1px solid rgba($colorBlack, 0.15);
+    }
+    &:nth-child(4) {
+      grid-area: item4;
+    }
+  }
+}
+
+.build-number {
+  color: $colorSecondary;
+}
+
+.build-subtitle {
+  color: $colorBlack;
+  margin-bottom: 8px;
+}
+
+.build-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.build-item-list {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding-left: 16px;
+    position: relative;
+
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: $colorSecondary;
+    }
+  }
+}

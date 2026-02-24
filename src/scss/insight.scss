@@ -66,6 +66,7 @@
   background-color: $colorFrostGray;
   padding: 16px;
   gap: 16px;
+  overflow: hidden;
 
   @include media(tablet) {
     flex-direction: column-reverse;
@@ -81,13 +82,24 @@
   background-color: $colorIceGray;
   padding: 16px;
   gap: 16px;
+  overflow: hidden;
 
   @include media(tablet) {
     padding: 40px;
   }
 }
-.chaos-card-img {
+
+.insight-card-img {
   object-fit: contain;
+  transition: transform 1s ease;
+
+  .insight-card-chaos:hover & {
+    transform: scale(1.18);
+  }
+
+  .insight-card-stack:hover & {
+    transform: scale(1.12);
+  }
 }
 .insight-card-text {
   color: $colorBlack;

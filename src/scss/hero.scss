@@ -1,8 +1,9 @@
 @use './common/index' as *;
 
 .hero-section {
-  // overflow: hidden;
+  background-color: $colorBlack;
 }
+
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -114,8 +115,8 @@
 
   @include media(tablet) {
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
   }
 
   @include media(laptop) {
