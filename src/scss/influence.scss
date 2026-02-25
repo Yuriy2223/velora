@@ -1,0 +1,93 @@
+@use './common/index' as *;
+
+.influence-section {
+  background-color: $colorBlack;
+}
+
+.influence-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 10px;
+  gap: 16px;
+
+  @include media(mobile) {
+    padding: 32px 16px;
+    gap: 48px;
+  }
+
+  @include media(tablet) {
+    padding: 54px 32px;
+  }
+
+  @include media(laptop) {
+    padding: 120px 40px;
+  }
+
+  @include media(desktop) {
+    padding: 140px 60px;
+  }
+}
+
+.influence-title {
+  color: $colorWhite;
+}
+
+.influence-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+
+  @include media(tablet) {
+    gap: 16px;
+  }
+
+  @include media(laptop) {
+    gap: 20px;
+  }
+
+  @media (min-width: 1340px) {
+    > :nth-child(2) .influence-card,
+    > :nth-child(4) .influence-card {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.influence-item {
+  display: flex;
+}
+
+.influence-card {
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid rgba($colorWhite, 0.2);
+  background-color: rgba($colorBlack, 0.2);
+}
+
+.influence-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.influence-img {
+  object-fit: contain;
+  transition: transform 0.9s ease;
+
+  .influence-card:hover & {
+    transform: scale(1.18);
+  }
+}
+
+.influence-text {
+  color: rgba($colorWhite, 0.8);
+  width: 97%;
+  margin: 0 auto;
+  padding: 16px;
+}
