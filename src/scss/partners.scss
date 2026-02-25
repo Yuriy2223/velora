@@ -2,34 +2,24 @@
 
 .partners-section {
   background-color: $colorWhite;
-  padding: 64px 16px;
-
-  @include media(tablet) {
-    padding: 80px 32px;
-  }
-
-  @include media(laptop) {
-    padding: 120px 40px;
-  }
 }
 
 .partners-container {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-
-  @include media(laptop) {
-    gap: 64px;
-  }
-}
-
-.partners-header {
-  display: flex;
-  flex-direction: column;
+  padding: 32px 16px;
   gap: 16px;
 
+  @include media(tablet) {
+    padding: 54px 32px;
+  }
+
   @include media(laptop) {
-    gap: 24px;
+    padding: 120px 40px;
+  }
+
+  @include media(desktop) {
+    padding: 140px 60px;
   }
 }
 
@@ -39,22 +29,12 @@
 
 .partners-subtitle {
   color: $colorBlack;
-  opacity: 0.8;
-  font-size: 16px;
-  line-height: 1.6;
-
-  @include media(laptop) {
-    font-size: 18px;
-  }
 }
 
 .partners-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 
   @include media(laptop) {
     position: relative;
@@ -62,78 +42,44 @@
 }
 
 .partners-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 16px;
-  padding: 24px 0;
+  display: flex;
+  padding: 12px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease;
 
   @include media(tablet) {
-    padding: 32px 0;
-    gap: 24px;
+    padding: 20px 0;
   }
 
   @include media(laptop) {
     padding: 40px 24px;
-    grid-template-columns: 1fr;
-    border-bottom: none;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.04);
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
 }
 
 .partners-number {
   color: $colorSecondary;
-  font-size: 18px;
-  font-weight: 500;
-
-  @include media(tablet) {
-    font-size: 20px;
-  }
-
-  @include media(laptop) {
-    font-size: 24px;
-  }
+  margin-right: 12px;
 }
 
 .partners-item-title {
   color: $colorBlack;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
-
-  span {
-    color: $colorSecondary;
-    margin-right: 16px;
-
-    @include media(laptop) {
-      margin-right: 24px;
-    }
-  }
-
-  @include media(tablet) {
-    font-size: 20px;
-  }
-
-  @include media(laptop) {
-    font-size: 24px;
-  }
 }
 
 .partners-img-wrap {
-  width: 48px;
-  height: 48px;
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @include media(tablet) {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 
   @include media(laptop) {
@@ -141,10 +87,10 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
     pointer-events: none;
   }
 }
