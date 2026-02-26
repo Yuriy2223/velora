@@ -1,0 +1,83 @@
+@use './common/index' as *;
+
+.cta-section {
+  background-color: $colorBlack;
+}
+
+.cta-container {
+  padding: 32px 16px;
+  gap: 16px;
+  background-image: url('/cta.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 484px;
+
+  @include media(tablet) {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 54px 32px;
+    background-image: url('/cta-tab.webp');
+    height: 500px;
+    background-size: cover;
+  }
+
+  @include media(laptop) {
+    height: 674px;
+    padding: 120px 40px;
+    background-image: url('/cta-laptop.webp');
+  }
+
+  @include media(desktop) {
+    padding: 140px 60px;
+  }
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 785px;
+
+  @include media(tablet) {
+    gap: 40px;
+  }
+}
+
+.cta-title {
+  color: $colorWhite;
+}
+
+.cta-text {
+  color: $colorWhite;
+  opacity: 0.9;
+  font-size: 16px;
+  line-height: 1.6;
+
+  @include media(tablet) {
+    font-size: 18px;
+  }
+
+  @include media(laptop) {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+}
+
+.cta-button {
+  width: 100%;
+  max-width: 296px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0 auto;
+
+  @include media(tablet) {
+    height: 68px;
+    font-size: 24px;
+    margin: 0;
+  }
+}
