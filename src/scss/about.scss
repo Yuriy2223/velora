@@ -48,6 +48,10 @@
   color: $colorWhite;
 }
 
+.about-text {
+  color: rgba($colorWhite, 0.6);
+}
+
 .about-right {
   display: flex;
   flex-direction: column;
