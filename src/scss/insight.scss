@@ -1,10 +1,13 @@
 @use './common/index' as *;
 
+.insight-section {
+  background-color: $colorWhite;
+}
+
 .insight-container {
   display: flex;
   flex-direction: column;
   padding: 32px 16px;
-  background-color: $colorWhite;
   gap: 16px;
 
   @include media(tablet) {
