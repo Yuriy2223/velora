@@ -13,6 +13,10 @@
     @media screen and (min-width: $tablet) {
       @content;
     }
+  } @else if $_screen == bigTablet {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
   } @else if $_screen == laptop {
     @media screen and (min-width: $laptop) {
       @content;
