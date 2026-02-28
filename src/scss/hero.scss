@@ -17,11 +17,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 182px 40px 0;
+    padding: 140px 40px 40px;
   }
 
   @include media(desktop) {
-    padding: 182px 80px 0;
+    padding: 182px 80px 60px;
   }
 }
 
@@ -33,6 +33,7 @@
     margin: 0 auto;
   }
   @include media(laptop) {
+    width: 50%;
   }
   @include media(desktop) {
     width: 56%;
@@ -51,6 +52,7 @@
   @include media(laptop) {
     margin-top: 0;
     height: auto;
+    width: 46%;
   }
   @include media(desktop) {
     width: 44%;
@@ -77,7 +79,11 @@
   }
 
   @include media(laptop) {
-    font-size: 66px;
+    font-size: 70px;
+  }
+
+  @media (min-width: 1544px) {
+    font-size: 85px;
   }
 
   @include media(desktop) {
