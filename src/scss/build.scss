@@ -2,7 +2,6 @@
 
 .build-section {
   background-color: $colorWhite;
-  color: $colorBlack;
 }
 
 .build-container {
@@ -27,6 +26,19 @@
 
 .build-title {
   color: $colorBlack;
+}
+
+.build-subtitle {
+  color: $colorBlack;
+  margin-bottom: 8px;
+}
+
+.build-text {
+  color: $colorBlack;
+}
+
+.build-number {
+  color: $colorSecondary;
 }
 
 .build-list {
@@ -70,15 +82,6 @@
       grid-area: item4;
     }
   }
-}
-
-.build-number {
-  color: $colorSecondary;
-}
-
-.build-subtitle {
-  color: $colorBlack;
-  margin-bottom: 8px;
 }
 
 .build-body {

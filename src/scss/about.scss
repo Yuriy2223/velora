@@ -69,8 +69,6 @@
   flex-direction: column;
   gap: 16px;
 
-  @include media(tablet) {
-  }
   @include media(laptop) {
     gap: 20px;
   }
